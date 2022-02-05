@@ -2,9 +2,10 @@
   "name": "node",
   "version": "1.0.0",
   "description": "the first project nodejs",
-  "main": "index.js",
+  "main": "scr/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "watch": "node-sass --watch scr/resources/scss/ -o scr/public/css",
+    "start": "nodemon --inspect scr/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,9 +24,12 @@
   },
   "homepage": "https://github.com/Bang1710/Nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "node-sass": "^7.0.1"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   }
 }
